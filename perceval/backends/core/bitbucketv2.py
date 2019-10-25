@@ -364,7 +364,7 @@ class BitBucketv2(Backend):
                 #    user_type = commit['committer']['type']
                 #    self.__get_user(commit['committer']['uuid'], user_type)
 
-                commit_hash = commit['id']
+                commit_hash = commit['hash']
                 hashes.append(commit_hash)
             return hashes
 

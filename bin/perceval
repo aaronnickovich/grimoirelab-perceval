@@ -39,6 +39,7 @@ Repositories are reached using specific backends. The most common backends
 are:
 
     askbot           Fetch questions and answers from Askbot site
+    bitbucket        Fetch issues, pull requests and repository information from BitBucket
     bugzilla         Fetch bugs from a Bugzilla server
     bugzillarest     Fetch bugs from a Bugzilla server (>=5.0) using its REST API
     confluence       Fetch contents from a Confluence server

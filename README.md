@@ -11,6 +11,8 @@ usage: perceval [-c <file>] [-g] <backend> [<args>] | --help | --version
 Repositories are reached using specific backends. The most common backends
 are:
     askbot           Fetch questions and answers from Askbot site
+    bitbucket        Fetch pull requests and repository information from BitBucket Enterprise (API v1)
+    bitbucketv2      Fetch issues, pull requests, and repository information from Public BitBucket (API v2)
     bugzilla         Fetch bugs from a Bugzilla server
     bugzillarest     Fetch bugs from a Bugzilla server (>=5.0) using its REST API
     confluence       Fetch contents from a Confluence server
@@ -137,6 +139,18 @@ Dueñas, S., Cosentino, V., Robles, G., & Gonzalez-Barahona, J. M. (2018, May). 
 $ perceval askbot 'http://askbot.org/' --from-date '2016-01-01'
 ```
 
+#TODO:FIND A GOOD PROJECT TO USE WITH BITBUCKET
+### BitBucket
+```
+$ perceval bitbucket elastic logstash --from-date '2016-01-01'
+```
+
+The BitBucket backend accepts the categories `issue`, `pull_request` and `repository` which allow to fetch the specific data.
+
+```
+$ perceval bitbucket --category issue elastic logstash
+```
+#
 ### Bugzilla
 To fetch bugs from Bugzilla, you have two options:
 
